@@ -7,26 +7,7 @@
         mc:Ignorable="d"
         Title="AMONIC Airlines Automation Systems" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <DockPanel Grid.Row="0">
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Add User"/>
-                <MenuItem Header="Exit"/>
-            </Menu>
-        </DockPanel>
-        <StackPanel Margin="10" Orientation="Horizontal" Grid.Row="1">
-            <TextBlock Text="Offices : "/>
-            <ComboBox x:Name="cmbOffice" SelectionChanged="cmbOffice_SelectionChanged" Width="200"/>
-        </StackPanel>
-        <DataGrid x:Name="dtgGrid" Margin="10" Grid.Row="2"/>
-        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10">
-            <Button Padding="5" Margin="0 0 10 0" Content="Change Role"/>
-            <Button Padding="5" Margin="0 0 10 0" Content="Enable/Disable Login"/>
-        </StackPanel>
+        <Frame Grid.Row="1" x:Name="frame" NavigationUIVisibility="Hidden" Source="LoginPage.xaml"/>
+        
     </Grid>
 </Window>

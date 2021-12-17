@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace ITSSBTraining
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserPage : Page
     {
-        public MainWindow()
+        public UserPage()
         {
             InitializeComponent();
         }
-       
     }
 }
