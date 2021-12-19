@@ -27,8 +27,9 @@
             <PasswordBox x:Name="txtPassword"  Width="300"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Horizontal" Grid.Row="3">
-            <Button Width="100" Click="Button_Click" Margin="20" Content="Login"/>
+            <Button x:Name="btnLogin" Width="100" Click="Button_Click" Margin="20" Content="Login"/>
             <Button Content="Exit" Width="100" Margin="20"/>
         </StackPanel>
+        <TextBlock x:Name="txtTimer" Text="Login time" VerticalAlignment="Bottom" HorizontalAlignment="Center" Visibility="Hidden"/>
     </Grid>
 </Page>

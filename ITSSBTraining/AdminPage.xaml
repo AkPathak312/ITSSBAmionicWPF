@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0">
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Add User"/>
+                <MenuItem Header="Add User" Click="MenuItem_Click"/>
                 <MenuItem Header="Exit"/>
             </Menu>
         </DockPanel>
@@ -25,10 +25,10 @@
             <TextBlock Text="Offices : "/>
             <ComboBox x:Name="cmbOffice" SelectionChanged="cmbOffice_SelectionChanged" Width="200"/>
         </StackPanel>
-        <DataGrid x:Name="dtgGrid" Margin="10" Grid.Row="2"/>
+        <DataGrid x:Name="dtgGrid" Margin="10" LoadingRow="dtgGrid_LoadingRow" SelectionChanged="dtgGrid_SelectionChanged" Grid.Row="2"/>
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10">
             <Button Padding="5" Margin="0 0 10 0" Content="Change Role"/>
-            <Button Padding="5" Margin="0 0 10 0" Content="Enable/Disable Login"/>
+            <Button Click="Button_Click" Padding="5" Margin="0 0 10 0" Content="Enable/Disable Login"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ITSSBTraining
 {
@@ -21,10 +22,31 @@ namespace ITSSBTraining
     public partial class LoginPage : Page
     {
         AmionicEntity db;
+        int count = 0;
+        DispatcherTimer dispatchTimer;
+        int time = 10;
         public LoginPage()
         {
             InitializeComponent();
             db= new AmionicEntity();
+            dispatchTimer=new DispatcherTimer();
+            dispatchTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatchTimer.Tick += new EventHandler(timeTick);
+        }
+
+        private void timeTick(object sender, EventArgs e)
+        {
+            txtTimer.Visibility = Visibility.Visible;
+            txtTimer.Text = "You can login in " + time + " Seconds!";
+            time -= 1;
+            if (time == 0)
+            {
+                btnLogin.IsEnabled = true;
+                txtTimer.Visibility = Visibility.Hidden;
+                dispatchTimer.Stop();
+                time = 10;
+            }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,7 +73,14 @@ namespace ITSSBTraining
             }
             else
             {
+                count = count + 1;
                 MessageBoxResult msgBox = MessageBox.Show("Invalid Credentials", "Login Error");
+            }
+            if (count == 3)
+            {
+                btnLogin.IsEnabled = false;
+                dispatchTimer.Start();
+                count = 0;
             }
             
         }

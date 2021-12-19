@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AMONIC Airlines Automation Systems" Height="450" Width="800">
     <Grid>
-        <Frame Grid.Row="1" x:Name="frame" NavigationUIVisibility="Hidden" Source="LoginPage.xaml"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Source="LoginPage.xaml"/>
         
     </Grid>
 </Window>
