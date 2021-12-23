@@ -13,6 +13,20 @@
         <AssociationConnector Association="AmionicModel.FK_Office_Country" ManuallyRouted="false" />
         <AssociationConnector Association="AmionicModel.FK_Users_Offices" ManuallyRouted="false" />
         <AssociationConnector Association="AmionicModel.FK_Users_Roles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AmionicModel.Aircraft" Width="1.5" PointX="5.25" PointY="13.5" />
+        <EntityTypeShape EntityType="AmionicModel.Airport" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="AmionicModel.CabinType" Width="1.5" PointX="5.25" PointY="17.625" />
+        <EntityTypeShape EntityType="AmionicModel.Route" Width="1.5" PointX="5.25" PointY="9.375" />
+        <EntityTypeShape EntityType="AmionicModel.Schedule" Width="1.5" PointX="7.5" PointY="9.125" />
+        <EntityTypeShape EntityType="AmionicModel.Ticket" Width="1.5" PointX="7.5" PointY="0.75" />
+        <AssociationConnector Association="AmionicModel.FK_Schedule_AirCraft" />
+        <AssociationConnector Association="AmionicModel.FK_AirPort_Country" />
+        <AssociationConnector Association="AmionicModel.FK_Routes_Airports2" />
+        <AssociationConnector Association="AmionicModel.FK_Routes_Airports3" />
+        <AssociationConnector Association="AmionicModel.FK_Ticket_TravelClass" />
+        <AssociationConnector Association="AmionicModel.FK_Schedule_Routes" />
+        <AssociationConnector Association="AmionicModel.FK_Ticket_Schedule" />
+        <AssociationConnector Association="AmionicModel.FK_Ticket_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

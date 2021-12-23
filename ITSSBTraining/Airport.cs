@@ -12,21 +12,24 @@ namespace ITSSBTraining
     using System;
     using System.Collections.Generic;
     
-    public partial class Country
+    public partial class Airport
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Country()
+        public Airport()
         {
-            this.Offices = new HashSet<Office>();
-            this.Airports = new HashSet<Airport>();
+            this.Routes = new HashSet<Route>();
+            this.Routes1 = new HashSet<Route>();
         }
     
         public int ID { get; set; }
+        public int CountryID { get; set; }
+        public string IATACode { get; set; }
         public string Name { get; set; }
     
+        public virtual Country Country { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Office> Offices { get; set; }
+        public virtual ICollection<Route> Routes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Airport> Airports { get; set; }
+        public virtual ICollection<Route> Routes1 { get; set; }
     }
 }

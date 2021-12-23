@@ -100,8 +100,8 @@ namespace ITSSBTraining
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            AddUserForm form=new AddUserForm();
-            form.Show();
+            AddUserWindow addUserWindow=new AddUserWindow();
+            addUserWindow.Show();
         }
     }
 

@@ -12,21 +12,18 @@ namespace ITSSBTraining
     using System;
     using System.Collections.Generic;
     
-    public partial class Country
+    public partial class CabinType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Country()
+        public CabinType()
         {
-            this.Offices = new HashSet<Office>();
-            this.Airports = new HashSet<Airport>();
+            this.Tickets = new HashSet<Ticket>();
         }
     
         public int ID { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Office> Offices { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Airport> Airports { get; set; }
+        public virtual ICollection<Ticket> Tickets { get; set; }
     }
 }

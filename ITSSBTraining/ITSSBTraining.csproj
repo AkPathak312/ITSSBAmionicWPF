@@ -72,16 +72,31 @@
     <Compile Include="AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUserWindow.xaml.cs">
+      <DependentUpon>AddUserWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aircraft.cs">
+      <DependentUpon>AmionicEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Airport.cs">
+      <DependentUpon>AmionicEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="AmionicEntity.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AmionicEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="CabinType.cs">
+      <DependentUpon>AmionicEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
       <DependentUpon>AmionicEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImportCSV.xaml.cs">
+      <DependentUpon>ImportCSV.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -90,6 +105,12 @@
       <DependentUpon>AmionicEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
+      <DependentUpon>AmionicEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Route.cs">
+      <DependentUpon>AmionicEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
       <DependentUpon>AmionicEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
@@ -101,13 +122,24 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>AmionicEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs">
+      <DependentUpon>AmionicEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>AmionicEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImportCSV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

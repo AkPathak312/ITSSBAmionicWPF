@@ -10,26 +10,27 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="110.18"/>
+            <RowDefinition Height="147.007"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="134*"/>
             <RowDefinition Height="21*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Row="0" Source="amioniclogo.png"/>
-        <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Horizontal" Grid.Row="1">
+        <Image Grid.Row="0" Source="amioniclogo.png" Grid.RowSpan="2"/>
+        <StackPanel HorizontalAlignment="Center" Margin="0,10,0,10" Orientation="Horizontal" Grid.Row="2">
             <TextBlock Text="Username : "/>
             <TextBox x:Name="txtUserName" Width="300"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Horizontal" Grid.Row="2">
+        <StackPanel HorizontalAlignment="Center" Margin="0,10,0,10" Orientation="Horizontal" Grid.Row="3">
             <TextBlock Text="Password : "/>
             <PasswordBox x:Name="txtPassword"  Width="300"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Margin="10" Orientation="Horizontal" Grid.Row="3">
+        <StackPanel HorizontalAlignment="Center" Margin="0,10,0,10" Orientation="Horizontal" Grid.Row="4">
             <Button x:Name="btnLogin" Width="100" Click="Button_Click" Margin="20" Content="Login"/>
             <Button Content="Exit" Width="100" Margin="20"/>
         </StackPanel>
-        <TextBlock x:Name="txtTimer" Text="Login time" VerticalAlignment="Bottom" HorizontalAlignment="Center" Visibility="Hidden"/>
+        <TextBlock x:Name="txtTimer" Text="Login time" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden" Margin="0,131,0,0" Grid.Row="1"/>
     </Grid>
 </Page>
